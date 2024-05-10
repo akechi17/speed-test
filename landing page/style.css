@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  background-color: mediumpurple;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li ul {
+  display: none;
+}
+
+.hero {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.right-hero {
+  background: url("omori.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.left-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: honeydew;
+}

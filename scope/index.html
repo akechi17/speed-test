@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        border: solid 1px;
+        box-shadow: -2px 1px 0 9999px #fff;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ut officiis porro? Illo
+      praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor.
+    </p>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ut officiis porro? Illo
+      praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor.
+    </p>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Illum ut officiis porro? Illo praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ut officiis porro? Illo
+      praesentium iusto tempora eius qui aliquam voluptatem fugiat rem ratione a pariatur, dolore iste sequi quae dolor.
+    </p>
+    <script>
+      dragElement(document.getElementById("box"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+
+        elmnt.onmousedown = dragMouseDown;
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+    </script>
+  </body>
+</html>

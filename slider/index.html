@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #color {
+        width: 600px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div id="color">
+        <h1 id="text">rgb(255,255,255)</h1>
+      </div>
+      <input type="range" id="red" value="255" min="0" max="255" />
+      <input type="range" id="green" value="255" min="0" max="255" />
+      <input type="range" id="blue" value="255" min="0" max="255" />
+    </div>
+
+    <script>
+      function myColor() {
+        var red = document.getElementById("red").value;
+        var green = document.getElementById("green").value;
+        var blue = document.getElementById("blue").value;
+        var color = "rgb(" + red + "," + green + "," + blue + ")";
+        document.getElementById("color").style.backgroundColor = color;
+        document.getElementById("text").innerText = color;
+      } 
+
+      document.getElementById("red").addEventListener("input", myColor);
+      document.getElementById("green").addEventListener("input", myColor);
+      document.getElementById("blue").addEventListener("input", myColor);
+    </script>
+  </body>
+</html>
