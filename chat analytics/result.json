@@ -1,0 +1,41 @@
+{
+  "name": "Bot",
+  "type": "bot_chat",
+  "messages": [
+    {
+      "type": "message",
+      "date": "2022-10-21T10:33:32",
+      "date_unixtime": "1666323212",
+      "from": "Budi",
+      "text": "AI, hello"
+    },
+    {
+      "type": "message",
+      "date": "2022-10-21T10:33:34",
+      "date_unixtime": "1666323214",
+      "from": "Bot",
+      "text": "Hello, how can I help you?"
+    },
+    {
+      "type": "message",
+      "date": "2022-10-21T10:33:53",
+      "date_unixtime": "1666323233",
+      "from": "Budi",
+      "text": "AI, can you help me?"
+    },
+    {
+      "type": "message",
+      "date": "2022-10-21T10:33:54",
+      "date_unixtime": "1666323214",
+      "from": "Bot",
+      "text": "Of course! Let me know what I can do for you."
+    },
+    {
+      "type": "message",
+      "date": "2022-10-21T10:34:22",
+      "date_unixtime": "1666323262",
+      "from": "Budi",
+      "text": "Hello, how can I help you?"
+    }
+  ]
+}
